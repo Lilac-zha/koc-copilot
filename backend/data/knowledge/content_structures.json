@@ -1,0 +1,104 @@
+{
+  "structures": [
+    {
+      "name": "HOOK-STORY-LESSON",
+      "alias": "钩子-故事-启示",
+      "applicable_types": ["evergreen", "personal_growth"],
+      "template": "【钩子】反直觉观点或强情绪开场（1-2句）\n\n【故事】真实经历叙述，时间线或事件线展开（3-4段）\n\n【启示】核心方法论提炼（3个要点）\n\n【行动】给读者一个可立即执行的步骤",
+      "best_for": ["个人经历", "成长反思", "认知升级"],
+      "engagement_pattern": "高收藏+高评论"
+    },
+    {
+      "name": "PROBLEM-AGITATE-SOLVE",
+      "alias": "痛点-放大-解决",
+      "applicable_types": ["evergreen", "how-to"],
+      "template": "【痛点】你有没有遇到过…（用问句引发共鸣）\n\n【放大】这个问题导致的连锁反应（让读者感受到痛苦）\n\n【解决】具体的解决方案（分步骤，每步配实例）\n\n【CTA】邀请评论分享或收藏备用",
+      "best_for": ["技巧教程", "干货分享", "方法论"],
+      "engagement_pattern": "高收藏+中等评论"
+    },
+    {
+      "name": "BEFORE-AFTER-BRIDGE",
+      "alias": "之前-之后-桥梁",
+      "applicable_types": ["evergreen", "transformation"],
+      "template": "【之前】描述改变前的状态（越具体越好）\n\n【之后】改变后的具体结果（数据或感受）\n\n【桥梁】中间发生了什么，详细过程\n\n【启发】给读者的可复制路径",
+      "best_for": ["转变故事", "挑战记录", "成长对比"],
+      "engagement_pattern": "高转发+高收藏"
+    },
+    {
+      "name": "LIST-WITH-TWIST",
+      "alias": "清单+反转",
+      "applicable_types": ["evergreen", "listicle"],
+      "template": "【引题】为什么这个清单与众不同（制造期待）\n\n【清单主体】每条用数字标注，格式：[要点名称]：具体解释+一个实例\n\n【反转】最后一条说出大家没想到的\n\n【总结】一句话点题",
+      "best_for": ["工具推荐", "技巧汇总", "踩坑总结"],
+      "engagement_pattern": "极高收藏+高转发"
+    },
+    {
+      "name": "EXPERT-REVEAL",
+      "alias": "内部人士揭秘",
+      "applicable_types": ["evergreen", "insider"],
+      "template": "【身份背书】我做了X年/我是X领域的…（建立权威）\n\n【揭秘点1】大多数人不知道的真相\n\n【揭秘点2】行业内部的潜规则\n\n【揭秘点3】能给读者带来直接价值的内幕\n\n【结语】说明分享这些内容的原因",
+      "best_for": ["行业洞察", "专业科普", "经验分享"],
+      "engagement_pattern": "高收藏+高点赞"
+    },
+    {
+      "name": "COMPARE-AND-CONTRAST",
+      "alias": "对比式",
+      "applicable_types": ["evergreen", "review"],
+      "template": "【对比维度设定】确立几个关键维度\n\n【对象A分析】优点+缺点+适合人群\n\n【对象B分析】优点+缺点+适合人群\n\n【结论】我的选择是X，原因是…\n\n【读者指南】根据你的情况选择哪个",
+      "best_for": ["产品测评", "方法论对比", "路径选择"],
+      "engagement_pattern": "高收藏+中等评论"
+    },
+    {
+      "name": "DAY-IN-LIFE",
+      "alias": "vlog日常流",
+      "applicable_types": ["lifestyle", "timely"],
+      "template": "【场景设定】今天是个什么样的日子\n\n【时间轴展开】6-8个时间节点，每个都有细节\n\n【亮点放大】其中最特别的一个时刻\n\n【总结感悟】今天学到或感受到的",
+      "best_for": ["日常记录", "生活展示", "真实感建立"],
+      "engagement_pattern": "高互动+粉丝粘性"
+    },
+    {
+      "name": "CHALLENGE-JOURNAL",
+      "alias": "挑战日记",
+      "applicable_types": ["evergreen", "series"],
+      "template": "【挑战宣言】我要挑战X天做到X\n\n【第N天记录】状态+发生的事+心情\n\n【关键转折点】最难的时刻\n\n【结果揭晓】最终做到了吗？数据对比\n\n【给想挑战的人】建议和注意事项",
+      "best_for": ["习惯养成", "自我提升", "过程记录"],
+      "engagement_pattern": "系列高留存+持续互动"
+    },
+    {
+      "name": "MISTAKE-LEARNING",
+      "alias": "错误-学习",
+      "applicable_types": ["evergreen", "reflection"],
+      "template": "【错误展示】我曾经做了X（自我暴露，建立真实感）\n\n【错误根源】当时为什么这样想/做\n\n【代价描述】这个错误带来了什么结果\n\n【正确做法】现在我会怎么做\n\n【给读者】避免同类错误的一个检查清单",
+      "best_for": ["避坑指南", "经验复盘", "自我反思"],
+      "engagement_pattern": "高评论+共鸣分享"
+    },
+    {
+      "name": "MYTH-BUSTING",
+      "alias": "破除误解",
+      "applicable_types": ["evergreen", "educational"],
+      "template": "【误解提出】很多人都以为…（1-2个常见误解）\n\n【误解危害】这样想/做的后果\n\n【真相揭示】实际上是怎样的\n\n【证据支撑】数据/案例/亲身经历\n\n【正确路径】应该怎么做",
+      "best_for": ["知识科普", "纠正偏见", "专业内容"],
+      "engagement_pattern": "高分享+讨论活跃"
+    }
+  ],
+  "mode_specific_guidance": {
+    "light": {
+      "description": "轻模式：AI生成完整可发布内容，用户微调即可发出",
+      "output_focus": "完整正文草稿，开场钩子+核心内容+互动结尾",
+      "length_guide": "小红书500-800字，视频号300-500字",
+      "tone_instruction": "语气要自然口语化，不能像模板，要像真人在说话"
+    },
+    "medium": {
+      "description": "中模式：AI提供结构框架+每段核心要点，用户补充细节",
+      "output_focus": "结构大纲+每段2-3句方向提示",
+      "length_guide": "每个段落方向3-4句话，不写完整内容",
+      "tone_instruction": "框架清晰，留白给用户填充个人经历"
+    },
+    "deep": {
+      "description": "深模式：AI分析同类内容盲区，提供3个差异化角度",
+      "output_focus": "竞品分析+差异化切入点+爆款概率预测",
+      "length_guide": "每个角度200字左右的分析",
+      "tone_instruction": "策略分析视角，理性客观，给出量化预估"
+    }
+  }
+}

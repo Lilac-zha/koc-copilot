@@ -1,0 +1,18 @@
+{
+  "user_id": "demo_user_001",
+  "version": 3,
+  "niche": "职场效率与个人成长",
+  "tone": "真诚幽默、有温度、接地气",
+  "values": ["持续学习", "真实分享", "实用主义", "反内卷"],
+  "target_audience": "25-35岁职场新人，焦虑但上进",
+  "content_strengths": ["个人经历真实感", "干货提炼能力", "情绪共鸣"],
+  "language_patterns": ["用数字量化", "对比结构", "口语化但有层次"],
+  "platform": "小红书",
+  "growth_stage": "plateau",
+  "trust_score": 72.5,
+  "commercial_ratio": 0.18,
+  "evergreen_ratio": 0.55,
+  "follower_count": 8600,
+  "avg_engagement_rate": 0.043,
+  "analysis_summary": "一个在职场赛道深耕的真实创作者，用自己踩过的坑和亲身经历帮助同类人少走弯路。"
+}

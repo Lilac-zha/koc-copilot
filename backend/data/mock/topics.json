@@ -1,0 +1,99 @@
+{
+  "topics": [
+    {
+      "id": "topic_001",
+      "title": "我用这个方法，把周会时间从2小时压到40分钟",
+      "category": "职场效率",
+      "type": "evergreen",
+      "heat_score": 62,
+      "competition_score": 0.35,
+      "growth_trend": "rising",
+      "blue_ocean_score": 52.5,
+      "differentiation_reason": "热度适中但竞争低，符合你「实用主义」价值观，与你擅长的数字量化风格高度匹配",
+      "content_asset": {
+        "structure_template": "开场痛点（我被周会折磨了3年）→ 转折发现 → 3个具体方法 → 效果数据 → 互动问题",
+        "cover_style": "文字主导，强对比色，数字突出",
+        "bgm_mood": "轻快专注类，无歌词",
+        "hashtags": ["#职场效率", "#职场干货", "#会议技巧", "#时间管理"],
+        "best_publish_time": "周二或周三 7:30-8:30"
+      }
+    },
+    {
+      "id": "topic_002",
+      "title": "入职3年，我终于搞明白为什么同事升职比我快",
+      "category": "职场成长",
+      "type": "evergreen",
+      "heat_score": 78,
+      "competition_score": 0.28,
+      "growth_trend": "rising",
+      "blue_ocean_score": 72.8,
+      "differentiation_reason": "高热低竞争蓝海，个人成长叙事与你的经历分享优势完美契合",
+      "content_asset": {
+        "structure_template": "自我反思开场（不是能力问题）→ 3个被忽视的维度 → 每个维度一个真实案例 → 行动建议",
+        "cover_style": "人物+文字，温暖色调，制造悬念感",
+        "bgm_mood": "轻音乐，略带情绪",
+        "hashtags": ["#职场成长", "#职场思维", "#升职", "#打工人"],
+        "best_publish_time": "周日晚 21:00-22:00"
+      }
+    },
+    {
+      "id": "topic_003",
+      "title": "25岁，我花了6个月把焦虑变成系统",
+      "category": "个人成长",
+      "type": "evergreen",
+      "heat_score": 55,
+      "competition_score": 0.22,
+      "growth_trend": "stable",
+      "blue_ocean_score": 42.9,
+      "differentiation_reason": "竞争极低，反内卷+焦虑话题与你受众高度重合，常青属性强",
+      "content_asset": {
+        "structure_template": "焦虑场景共鸣 → 转变契机 → 系统拆解（3-4步）→ 现在的状态 → 读者行动引导",
+        "cover_style": "手绘笔记风格，温暖米白色系",
+        "bgm_mood": "舒缓治愈类",
+        "hashtags": ["#焦虑", "#个人成长", "#自我管理", "#心理健康"],
+        "best_publish_time": "周六早晨 8:00-9:00"
+      }
+    },
+    {
+      "id": "topic_004",
+      "title": "年终总结这样写，让领导记住你的名字",
+      "category": "职场技能",
+      "type": "timely",
+      "heat_score": 88,
+      "competition_score": 0.72,
+      "growth_trend": "rising",
+      "blue_ocean_score": 24.6,
+      "differentiation_reason": "当前热点但竞争激烈，建议加入你的个人故事降低同质化",
+      "content_asset": {
+        "structure_template": "踩坑对比（99%人这样写）→ 正确框架（成果+数据+影响）→ 模板示例 → 1句话总结",
+        "cover_style": "干净模板风，黑白+重点色",
+        "bgm_mood": "轻快律动",
+        "hashtags": ["#年终总结", "#职场技巧", "#打工人", "#工作汇报"],
+        "best_publish_time": "周一 12:00-13:00"
+      }
+    },
+    {
+      "id": "topic_005",
+      "title": "不内卷的人是怎么过日子的（真实记录）",
+      "category": "生活方式",
+      "type": "evergreen",
+      "heat_score": 45,
+      "competition_score": 0.18,
+      "growth_trend": "rising",
+      "blue_ocean_score": 52.7,
+      "differentiation_reason": "极低竞争蓝海，与你「反内卷」价值观天然契合，真实感叙事是你的优势",
+      "content_asset": {
+        "structure_template": "反直觉开场（我不是躺平）→ 具体的一天/一周安排 → 3个选择原则 → 效果与代价 → 开放式思考",
+        "cover_style": "生活感照片，自然光，手写字",
+        "bgm_mood": "自然声或轻柔ambient",
+        "hashtags": ["#反内卷", "#生活方式", "#慢生活", "#人生选择"],
+        "best_publish_time": "周五晚 20:00-21:00"
+      }
+    }
+  ],
+  "summary": {
+    "total_blue_ocean": 3,
+    "total_red_ocean": 1,
+    "recommended_mix": "本周建议：2篇常青+1篇热点，常青优先选topic_002和topic_001"
+  }
+}

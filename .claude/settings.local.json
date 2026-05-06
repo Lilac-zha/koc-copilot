@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-react-app *)",
+      "Bash(npm config *)",
+      "Bash(npm --version)",
+      "Bash(npx --yes create-react-app frontend --template typescript)",
+      "Bash(npm install *)",
+      "Bash(npx tailwindcss *)",
+      "Bash(./node_modules/.bin/tailwindcss init *)",
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(cmd /c \"cd C:\\\\Users\\\\zhyly\\\\koc-copilot\\\\frontend && node_modules\\\\.bin\\\\tsc --noEmit 2>&1\")",
+      "Bash(node C:\\\\Users\\\\zhyly\\\\koc-copilot\\\\frontend\\\\node_modules\\\\typescript\\\\bin\\\\tsc --noEmit --project C:\\\\Users\\\\zhyly\\\\koc-copilot\\\\frontend\\\\tsconfig.json)",
+      "Bash(node node_modules/typescript/bin/tsc --noEmit)",
+      "Bash(python -c \"from services.rag_retriever import build_rag_context; print\\(build_rag_context\\('升职加薪', '职场效率', '小红书', 'light', 2\\)\\)\")",
+      "Bash(python -c \"import httpx; print\\('httpx ok'\\)\")",
+      "Bash(python -c ' *)"
+    ]
+  }
+}

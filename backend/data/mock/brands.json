@@ -1,0 +1,56 @@
+{
+  "brands": [
+    {
+      "id": "brand_001",
+      "name": "效率云笔记",
+      "category": "效率工具",
+      "product_type": "SaaS软件",
+      "target_audience": "职场人士、学生",
+      "budget_range": "500-2000元/篇",
+      "content_style_requirement": "真实使用体验、干货测评",
+      "match_score": 94,
+      "match_reasons": ["垂类高度匹配：效率工具×职场内容", "受众重合度极高", "内容风格契合"],
+      "persona_fit": "你的「实用主义」风格与品牌调性一致，不会损伤信任资产",
+      "contact_status": "可接触"
+    },
+    {
+      "id": "brand_002",
+      "name": "番茄学习法App",
+      "category": "学习效率",
+      "product_type": "移动应用",
+      "target_audience": "25-35岁职场学习者",
+      "budget_range": "300-1500元/篇",
+      "content_style_requirement": "个人使用故事、学习方法分享",
+      "match_score": 88,
+      "match_reasons": ["受众完全重合", "内容融合自然度高", "符合你的个人成长垂类"],
+      "persona_fit": "可以用你自己的学习经历自然带出，真实感强",
+      "contact_status": "可接触"
+    },
+    {
+      "id": "brand_003",
+      "name": "职场英语课",
+      "category": "在线教育",
+      "product_type": "知识付费课程",
+      "target_audience": "职场新人",
+      "budget_range": "800-3000元/篇",
+      "content_style_requirement": "成长故事、使用前后对比",
+      "match_score": 76,
+      "match_reasons": ["受众部分重合", "内容方向可融合"],
+      "persona_fit": "需要注意：教育广告本月已有1篇，建议间隔至少3篇内容后再接",
+      "contact_status": "建议等待"
+    },
+    {
+      "id": "brand_004",
+      "name": "某护肤品牌",
+      "category": "美妆护肤",
+      "product_type": "护肤品",
+      "target_audience": "18-30岁女性",
+      "budget_range": "1000-5000元/篇",
+      "content_style_requirement": "测评、使用体验",
+      "match_score": 23,
+      "match_reasons": [],
+      "persona_fit": "警告：垂类严重不匹配，接受此合作将对你的职场成长人设造成显著信任折旧",
+      "contact_status": "不推荐"
+    }
+  ]
+}
