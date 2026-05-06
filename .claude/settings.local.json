@@ -16,7 +16,13 @@
       "Bash(python -c \"from services.rag_retriever import build_rag_context; print\\(build_rag_context\\('升职加薪', '职场效率', '小红书', 'light', 2\\)\\)\")",
       "Bash(python -c \"import httpx; print\\('httpx ok'\\)\")",
       "Bash(python -c ' *)",
-      "Bash(echo \"EXIT:$?\")"
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(pip show *)",
+      "Bash(pip install *)",
+      "Bash(python convert_to_pdf.py)",
+      "Bash(python \"C:/Users/zhyly/koc-copilot/docs/convert_to_pdf.py\")",
+      "Bash(pandoc --version)",
+      "Bash(python -c \"import xhtml2pdf\")"
     ]
   }
 }
