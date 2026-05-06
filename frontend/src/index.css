@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS 变量 ─────────────────────────────────────── */
+:root {
+  --bg:          #F8FAFC;
+  --card:        #FFFFFF;
+  --card-2:      #F1F5F9;
+  --border:      #E2E8F0;
+  --blue:        #0EA5E9;
+  --blue-light:  #E0F2FE;
+  --blue-dark:   #0284C7;
+  --amber:       #F59E0B;
+  --amber-light: #FEF3C7;
+  --amber-dark:  #D97706;
+  --success:     #059669;
+  --warning:     #D97706;
+  --danger:      #DC2626;
+  --text-primary:   #0F172A;
+  --text-secondary: #64748B;
+  --text-muted:     #94A3B8;
+}
+
+/* ─── 全局重置 ──────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── 滚动条 ────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+/* ─── 动画 ──────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes spinGradient {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes pulseBlue {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(14,165,233,0); }
+  50%       { box-shadow: 0 0 20px 4px rgba(14,165,233,0.18); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* ─── 工具类 ────────────────────────────────────────── */
+.page-enter {
+  animation: fadeInUp 0.22s ease-out forwards;
+}
+
+/* ── 卡片 ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 1px 4px rgba(15,23,42,0.06);
+}
+.card-2 {
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+/* 蓝色高亮卡片（左竖线） */
+.card-blue {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--blue);
+  border-radius: 12px;
+}
+/* 琥珀高亮卡片 */
+.card-amber {
+  background: var(--amber-light);
+  border: 1px solid #FDE68A;
+  border-left: 4px solid var(--amber);
+  border-radius: 12px;
+}
+/* 蓝色边框选中态 */
+.card-blue-selected {
+  background: var(--card);
+  border: 2px solid var(--blue);
+  border-radius: 12px;
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.12);
+}
+
+/* ── 按钮 ── */
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font-family: inherit;
+}
+.btn-primary:hover   { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(14,165,233,0.3); }
+.btn-primary:active  { transform: translateY(0); }
+.btn-primary:disabled { opacity: 0.45; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.btn-amber {
+  background: var(--amber);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font-family: inherit;
+}
+.btn-amber:hover   { background: var(--amber-dark); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(245,158,11,0.35); }
+.btn-amber:active  { transform: translateY(0); }
+.btn-amber:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+.btn-ghost:hover { background: var(--card-2); border-color: #94A3B8; color: var(--text-primary); }
+
+/* ── 表单 ── */
+.input {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+  width: 100%;
+}
+.input::placeholder { color: var(--text-muted); }
+.input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(14,165,233,0.12); }
+
+.textarea {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1.6;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+  resize: none;
+  width: 100%;
+}
+.textarea::placeholder { color: var(--text-muted); }
+.textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(14,165,233,0.12); }
+
+/* ── 进度条 ── */
+.progress-bar { height: 6px; background: #E2E8F0; border-radius: 3px; overflow: hidden; }
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue), #38BDF8);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+.progress-fill-amber {
+  height: 100%;
+  background: linear-gradient(90deg, var(--amber), #FCD34D);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+.progress-fill-green {
+  height: 100%;
+  background: linear-gradient(90deg, var(--success), #34D399);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+.progress-fill-red {
+  height: 100%;
+  background: linear-gradient(90deg, var(--danger), #F87171);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+/* ── Spinner ── */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--blue), #38BDF8, transparent 65%);
+  animation: spinGradient 0.9s linear infinite;
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #fff 0);
+  mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #fff 0);
+}
+
+/* ── hover上浮 ── */
+.hover-lift { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.hover-lift:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(15,23,42,0.1); }
+
+/* ── 渐变文字 ── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--blue) 0%, #0284C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Chip ── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.chip:hover { border-color: var(--blue); color: var(--blue); }
+.chip-selected {
+  background: var(--blue-light) !important;
+  border-color: var(--blue) !important;
+  color: var(--blue-dark) !important;
+  font-weight: 600;
+}
+
+/* ── Badge ── */
+.badge-blue  { background: #DBEAFE; color: #1D4ED8; border: 1px solid #BFDBFE; border-radius: 20px; padding: 2px 8px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.badge-green { background: #D1FAE5; color: #059669; border: 1px solid #A7F3D0; border-radius: 20px; padding: 2px 8px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.badge-amber { background: #FEF3C7; color: #D97706; border: 1px solid #FDE68A; border-radius: 20px; padding: 2px 8px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.badge-red   { background: #FEE2E2; color: #DC2626; border: 1px solid #FECACA; border-radius: 20px; padding: 2px 8px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.badge-gray  { background: #F1F5F9; color: #64748B; border: 1px solid #E2E8F0; border-radius: 20px; padding: 2px 8px; font-size: 11px; font-weight: 600; white-space: nowrap; }
+
+/* ── Tooltip ── */
+.custom-tooltip {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 16px rgba(15,23,42,0.1);
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+/* ── Content Block (Create page) ── */
+.content-block {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.content-block:focus-within {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.08);
+}
+.content-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background: var(--card-2);
+  border-bottom: 1px solid var(--border);
+}
+.content-block-body {
+  padding: 14px 16px;
+}
