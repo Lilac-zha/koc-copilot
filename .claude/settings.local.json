@@ -15,7 +15,8 @@
       "Bash(node node_modules/typescript/bin/tsc --noEmit)",
       "Bash(python -c \"from services.rag_retriever import build_rag_context; print\\(build_rag_context\\('升职加薪', '职场效率', '小红书', 'light', 2\\)\\)\")",
       "Bash(python -c \"import httpx; print\\('httpx ok'\\)\")",
-      "Bash(python -c ' *)"
+      "Bash(python -c ' *)",
+      "Bash(echo \"EXIT:$?\")"
     ]
   }
 }

@@ -1,7 +1,7 @@
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
-openai==1.6.1
+fastapi==0.100.0
+uvicorn[standard]==0.23.0
+openai==1.40.0
 python-dotenv==1.0.0
-pydantic==2.5.2
-httpx==0.25.2
+pydantic==1.10.13
+httpx==0.24.0
 pytrends==4.9.2

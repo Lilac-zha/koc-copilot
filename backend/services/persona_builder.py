@@ -1,6 +1,7 @@
 import json
 import os
 from pathlib import Path
+from typing import List
 from pydantic import BaseModel
 from services.ai_client import ai_client
 
@@ -12,10 +13,10 @@ class PersonaSeed(BaseModel):
     version: int = 1
     niche: str
     tone: str
-    values: list[str]
+    values: List[str]
     target_audience: str
-    content_strengths: list[str]
-    language_patterns: list[str]
+    content_strengths: List[str]
+    language_patterns: List[str]
     platform: str
     growth_stage: str  # growth / plateau / declining
     trust_score: float = 80.0

@@ -27,7 +27,7 @@ async def get_analytics(user_id: str):
 async def update_flywheel_data(req: FlywheelUpdateRequest):
     """数据飞轮：回流数据更新人设版本"""
     persona = _persona_store.get(req.user_id) or _load_mock_persona(req.user_id)
-    new_data = req.model_dump(exclude={"user_id"}, exclude_none=True)
+    new_data = req.dict(exclude={"user_id"}, exclude_none=True)
     updated = update_flywheel(persona, new_data)
     _persona_store[req.user_id] = updated
     return {

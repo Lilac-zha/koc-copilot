@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List, Dict
 import json
 from pathlib import Path
 from datetime import datetime
@@ -14,7 +14,7 @@ from services.persona_builder import (
 INSIGHTS_FILE = Path(__file__).parent.parent / "data" / "user_insights.json"
 
 
-def _save_user_insights(insights: list[dict]):
+def _save_user_insights(insights: List[dict]):
     """将用户'其他'输入保存到洞察文件"""
     if not insights:
         return
@@ -32,20 +32,20 @@ def _save_user_insights(insights: list[dict]):
 router = APIRouter()
 
 # MOCK - 内存存储，替换为数据库
-_persona_store: dict[str, PersonaSeed] = {}
+_persona_store: Dict[str, PersonaSeed] = {}
 
 
 class ContentImportRequest(BaseModel):
     user_id: str
     platform: str
-    content_samples: list[str]
+    content_samples: List[str]
 
 
 class QuestionnaireRequest(BaseModel):
     user_id: str
     platform: str
-    answers: dict[str, str]
-    other_inputs: Optional[dict[str, str]] = None  # 用户填写的"其他"选项
+    answers: Dict[str, str]
+    other_inputs: Optional[Dict[str, str]] = None  # 用户填写的"其他"选项
 
 
 @router.post("/build/from-content", response_model=dict)
@@ -55,7 +55,7 @@ async def build_persona_from_content(req: ContentImportRequest):
         raise HTTPException(status_code=400, detail="至少需要提供1条历史内容")
     persona = await build_from_content(req.user_id, req.content_samples, req.platform)
     _persona_store[req.user_id] = persona
-    return persona.model_dump()
+    return persona.dict()
 
 
 @router.post("/build/from-questionnaire", response_model=dict)
@@ -77,7 +77,7 @@ async def build_persona_from_questionnaire(req: QuestionnaireRequest):
 
     persona = await build_from_questionnaire(req.user_id, req.answers, req.platform)
     _persona_store[req.user_id] = persona
-    return persona.model_dump()
+    return persona.dict()
 
 
 @router.get("/demo", response_model=dict)
@@ -85,7 +85,7 @@ async def get_demo_persona():
     """获取演示用人设数据（无需登录）"""
     persona = _load_mock_persona("demo_user_001")
     _persona_store["demo_user_001"] = persona
-    return persona.model_dump()
+    return persona.dict()
 
 
 @router.get("/{user_id}", response_model=dict)
@@ -95,4 +95,4 @@ async def get_persona(user_id: str):
         # MOCK - 返回演示数据
         persona = _load_mock_persona(user_id)
         _persona_store[user_id] = persona
-    return _persona_store[user_id].model_dump()
+    return _persona_store[user_id].dict()
