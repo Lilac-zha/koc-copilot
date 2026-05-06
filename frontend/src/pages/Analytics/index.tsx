@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-redeclare */
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { usePersonaStore } from "../../store/personaStore";
