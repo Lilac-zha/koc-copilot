@@ -55,7 +55,7 @@ async def build_persona_from_content(req: ContentImportRequest):
         raise HTTPException(status_code=400, detail="至少需要提供1条历史内容")
     persona = await build_from_content(req.user_id, req.content_samples, req.platform)
     _persona_store[req.user_id] = persona
-    return persona.dict()
+    return persona.model_dump()
 
 
 @router.post("/build/from-questionnaire", response_model=dict)
@@ -77,7 +77,7 @@ async def build_persona_from_questionnaire(req: QuestionnaireRequest):
 
     persona = await build_from_questionnaire(req.user_id, req.answers, req.platform)
     _persona_store[req.user_id] = persona
-    return persona.dict()
+    return persona.model_dump()
 
 
 @router.get("/demo", response_model=dict)
@@ -85,7 +85,7 @@ async def get_demo_persona():
     """获取演示用人设数据（无需登录）"""
     persona = _load_mock_persona("demo_user_001")
     _persona_store["demo_user_001"] = persona
-    return persona.dict()
+    return persona.model_dump()
 
 
 @router.get("/{user_id}", response_model=dict)
@@ -95,4 +95,4 @@ async def get_persona(user_id: str):
         # MOCK - 返回演示数据
         persona = _load_mock_persona(user_id)
         _persona_store[user_id] = persona
-    return _persona_store[user_id].dict()
+    return _persona_store[user_id].model_dump()
