@@ -10,7 +10,7 @@ import {
   ResponsiveContainer, AreaChart, Area,
 } from "recharts";
 
-interface Analytics {
+interface AnalyticsData {
   trust_score: number;
   trust_level: string;
   commercial_ratio: number;
@@ -73,7 +73,7 @@ function AnimatedScore({ score }: { score: number }) {
 export default function Analytics() {
   const navigate = useNavigate();
   const { persona } = usePersonaStore();
-  const [data, setData] = useState<Analytics | null>(null);
+  const [data, setData] = useState<AnalyticsData | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

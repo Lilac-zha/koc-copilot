@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { usePersonaStore } from "../../store/personaStore";
 import { generateContent, refineContent } from "../../api";
@@ -554,7 +554,6 @@ export default function Create() {
   const [copiedTag, setCopiedTag] = useState<string | null>(null);
 
   const uid = persona?.user_id || "demo_user_001";
-  const currentResult = versions[currentVersionIdx] || null;
 
   const doGenerate = async (m: Mode = mode) => {
     if (!topicTitle.trim()) { setError("请先填写选题标题"); return; }
